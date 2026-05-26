@@ -1,86 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Luciano Salazar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personal de Luciano Salazar, desarrollador web y estudiante de Economía en la UBA.">
+    <title>Luciano Salazar | Dev Frontend</title>
 
-    <!-- Conexión al CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: DM Sans para el cuerpo, DM Mono para acentos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- ===================== HEADER / NAV ===================== -->
+    <header id="header">
+        <nav class="nav-container">
+            <span class="nav-logo">LS<span class="accent">.</span></span>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#que-hago">Qué hago</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <main>
 
-        <!-- SECCIÓN INICIO -->
-        <section id="inicio">
-            <h1>Hola, soy Luciano</h1>
-            <p>Estudiante de programación en formación, apasionado por el desarrollo web.</p>
+        <!-- ===================== HERO / PORTADA ===================== -->
+        <!-- Sección principal: nombre, título y CTA -->
+        <section id="hero">
+            <div class="hero-content">
+                <p class="hero-tag"><i class="fa-solid fa-circle-dot"></i> Disponible para trabajar</p>
+                <h1>Luciano<br>Salazar</h1>
+                <p class="hero-subtitle">Desarrollador Web Frontend</p>
+                <p class="hero-desc">
+                    Estudiante de Desarrollo de Software y Ciencias Económicas.
+                    Construyo interfaces web limpias y funcionales con HTML, CSS y JavaScript.
+                </p>
+                <a href="#contacto" class="btn-primary">Contactame <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Imagen representativa / avatar -->
+            <!-- TODO: reemplazar con foto personal real en assets/img/avatar.jpg -->
+            <div class="hero-image-wrap">
+                <img
+                    src="assets/img/avatar.jpg"
+                    alt="Foto de Luciano Salazar"
+                    class="avatar-img"
+                    width="320"
+                    height="320"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
+                <!-- Placeholder visible si no hay imagen cargada -->
+                <div class="avatar-placeholder" style="display:none;">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
         </section>
 
-        <!-- SECCIÓN SOBRE MÍ -->
+        <!-- ===================== SOBRE MÍ ===================== -->
         <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>
-                Soy estudiante de desarrollo de software con interés en el desarrollo web.
-                Me encuentro aprendiendo tecnologías modernas para construir aplicaciones funcionales y atractivas.
-            </p>
+            <div class="section-inner">
+                <h2 class="section-title">Sobre mí</h2>
+                <article class="sobre-mi-content">
+                    <p>
+                        Soy Luciano, estudiante de Desarrollo de Software en el IFTS 16
+                        y de la Licenciatura en Economía en la UBA. Me interesa la intersección
+                        entre tecnología y análisis económico — construir herramientas digitales
+                        que resuelvan problemas reales.
+                    </p>
+                    <p>
+                        Trabajo con HTML, CSS y JavaScript, y me enfoco en escribir código
+                        ordenado, semántico y fácil de mantener. Cada proyecto es una oportunidad
+                        de aprender algo nuevo y mejorar lo anterior.
+                    </p>
+                    <!-- TODO: agregar proyectos concretos a medida que el portfolio crezca -->
+                    <div class="info-badges">
+                        <span class="badge"><i class="fa-solid fa-location-dot"></i> Buenos Aires, AR</span>
+                        <span class="badge"><i class="fa-solid fa-graduation-cap"></i> IFTS 16 + UBA</span>
+                        <span class="badge"><i class="fa-solid fa-code"></i> Frontend</span>
+                        <span class="badge"><i class="fa-solid fa-chart-line"></i> Economía</span>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <!-- SECCIÓN SERVICIOS -->
-        <section id="servicios">
-            <h2>Qué hago</h2>
-            <p>
-                Desarrollo páginas web estáticas, aplicando buenas prácticas de HTML y CSS.
-                Busco mejorar constantemente mis habilidades para ofrecer soluciones cada vez más completas.
-            </p>
+        <!-- ===================== QUÉ HAGO ===================== -->
+        <section id="que-hago">
+            <div class="section-inner">
+                <h2 class="section-title">Qué hago</h2>
+                <div class="cards-grid">
+
+                    <div class="card">
+                        <i class="fa-solid fa-laptop-code card-icon"></i>
+                        <h3>Desarrollo Frontend</h3>
+                        <p>Construyo interfaces web con HTML, CSS y JavaScript, con foco en la estructura semántica, la legibilidad del código y la experiencia del usuario.</p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-solid fa-mobile-screen card-icon"></i>
+                        <h3>Diseño Responsivo</h3>
+                        <p>Adapto las páginas para que funcionen correctamente en celulares, tablets y escritorio usando Flexbox y media queries.</p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-solid fa-chart-line card-icon"></i>
+                        <h3>Visión Analítica</h3>
+                        <p>Mi formación en economía me permite pensar los proyectos con criterio de negocio: qué problema resuelven, para quién y cómo medirlo.</p>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
-        <!-- SECCIÓN TABLA -->
-        <section>
-            <h2>Tecnologías</h2>
+        <!-- ===================== TECNOLOGÍAS ===================== -->
+        <!-- Tabla que lista tecnologías que manejo, aprendo y tengo en el horizonte -->
+        <section id="tecnologias">
+            <div class="section-inner">
+                <h2 class="section-title">Tecnologías</h2>
 
-            <table>
-                <tr>
-                    <th>Conozco</th>
-                    <th>Aprendiendo</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>CSS</td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td>Git</td>
-                </tr>
-            </table>
+                <div class="table-wrap">
+                    <table id="tabla-tech">
+                        <thead>
+                            <tr>
+                                <th>Tecnología</th>
+                                <th>Estado</th>
+                                <th>Nivel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa-brands fa-html5"></i> HTML5</td>
+                                <td><span class="tag tag-green">Manejo</span></td>
+                                <td>Intermedio</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-brands fa-css3-alt"></i> CSS3</td>
+                                <td><span class="tag tag-green">Manejo</span></td>
+                                <td>Intermedio</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-brands fa-js"></i> JavaScript</td>
+                                <td><span class="tag tag-green">Manejo</span></td>
+                                <td>Intermedio</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-brands fa-git-alt"></i> Git / GitHub</td>
+                                <td><span class="tag tag-yellow">Aprendiendo</span></td>
+                                <td>Básico</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-brands fa-react"></i> React</td>
+                                <td><span class="tag tag-gray">Próximamente</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-brands fa-python"></i> Python</td>
+                                <td><span class="tag tag-gray">Próximamente</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         </section>
 
-        <!-- SECCIÓN FORMULARIO -->
+        <!-- ===================== HOBBIES ===================== -->
+        <section id="hobbies">
+            <div class="section-inner">
+                <h2 class="section-title">Fuera del código</h2>
+                <div class="hobbies-list">
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-futbol"></i>
+                        <span>Fútbol</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span>Entrenamiento</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Economía</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Música</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACTO ===================== -->
+        <!-- Formulario simple sin funcionalidad backend (PFO 1) -->
+        <!-- TODO: conectar con Formspree o Netlify Forms para recibir mensajes reales -->
         <section id="contacto">
-            <h2>Contacto</h2>
+            <div class="section-inner">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-desc">¿Tenés un proyecto o querés charlar? Dejame un mensaje.</p>
 
-            <form>
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Apellido">
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Teléfono">
-                <button type="submit">Enviar</button>
-            </form>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contame de qué se trata..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+                    </button>
+                </form>
+
+                <!-- Links de contacto directo -->
+                <div class="contact-links">
+                    <a href="mailto:luchitosalaz@gmail.com"><i class="fa-solid fa-envelope"></i> luciano@email.com</a>
+                    <a href="https://github.com/LucianoSalazar24" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/luciano-salazar-759620362/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
+
+            </div>
         </section>
 
     </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="footer">
+        <p>Hecho con <i class="fa-solid fa-heart"></i> por <strong>Luciano Salazar</strong> &mdash; 2025</p>
+        <p class="footer-sub">IFTS 16 &middot; Desarrollo Web</p>
+    </footer>
 
 </body>
 </html>
