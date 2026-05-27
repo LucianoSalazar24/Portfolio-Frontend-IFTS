@@ -1,12 +1,12 @@
-/*///////////////// AJUSTES GENERALES //////////////////*/
+/*////////// AJUSTES GENERALES ///////////*/
 
-/* Variables de color y tipografía - modificar acá para cambiar el tema */
+/* Variables de color y tipografía*/
 :root {
     --bg-base:        #0e0e0e;
     --bg-surface:     #161616;
     --bg-card:        #1c1c1c;
     --bg-input:       #111111;
-    --accent:         #e8e0c8;        /* tono cálido, no blanco puro */
+    --accent:         #e8e0c8;
     --accent-muted:   #a09880;
     --text-primary:   #f0ece2;
     --text-secondary: #8a8680;
@@ -212,7 +212,7 @@ strong {
     max-width: fit-content;
 }
 
-/* El h1 es un elemento en bloque — ocupa toda la línea */
+/* El h1 es un elemento en bloque, me ocupa toda la línea */
 .hero-content > h1 {
     color: var(--text-primary);
     margin-bottom: 0.5rem;
@@ -232,7 +232,7 @@ strong {
     max-width: 46ch;
 }
 
-/* Botón principal — elemento en línea con padding */
+/* Botón principal —> elemento en línea con padding */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -285,7 +285,7 @@ strong {
     color: var(--border-hover);
 }
 
-/*///////////////// SOBRE MÍ //////////////////*/
+/*////////// SOBRE MÍ ///////////*/
 
 /* Sección con fondo alternado para separar visualmente */
 #sobre-mi {
@@ -319,7 +319,7 @@ strong {
     border-radius: 99px;
 }
 
-/*///////////////// QUÉ HAGO //////////////////*/
+/*////////// QUÉ HAGO ///////////*/
 
 .cards-grid {
     display: flex;
@@ -357,7 +357,7 @@ strong {
     line-height: 1.6;
 }
 
-/*///////////////// TECNOLOGÍAS //////////////////*/
+/*////////// TECNOLOGÍAS ///////////*/
 
 #tecnologias {
     background-color: var(--bg-surface);
@@ -437,7 +437,7 @@ strong {
     color: var(--tag-gray-text);
 }
 
-/*__________________ Hobbies __________________________*/
+/*__________________ Hobbies ___________________*/
 
 .hobbies-list {
     display: flex;
@@ -473,9 +473,9 @@ strong {
     font-family: var(--font-mono);
 }
 
-/*///////////////// FORMULARIO DE CONTACTO //////////////////*/
+/*////////// FORMULARIO DE CONTACTO ///////////*/
 
-/* TODO: mejorar con animaciones de validación en tiempo real con JS */
+/* Lo podria mejorar mas adelante con animaciones de validación en tiempo real con JS */
 
 .contact-form {
     display: flex;
@@ -574,7 +574,7 @@ strong {
     color: var(--accent);
 }
 
-/*///////////////// FOOTER //////////////////*/
+/*////////// FOOTER ///////////*/
 
 #footer {
     background: var(--bg-surface);
@@ -602,7 +602,7 @@ strong {
     font-size: 0.8rem;
 }
 
-/*__________________ Opacidad decorativa __________________________*/
+/*__________________ Opacidad decorativa ___________________*/
 /* El fondo del hero tiene opacidad para no competir con el texto */
 #hero::before {
     content: '';
@@ -623,7 +623,8 @@ strong {
     z-index: 1;
 }
 
-/*///////////////// RESPONSIVIDAD //////////////////*/
+/*////////// RESPONSIVIDAD ///////////*/
+/* Esto fue agregado de mas a lo que pide la consigna por si es visto desde otro dispositivo que no sea desktop, sin hacer cambios drasticos*/
 
 /* Tablet horizontal */
 @media (max-width: 1080px) {
@@ -678,7 +679,7 @@ strong {
     }
 
     .nav-links {
-        display: none; /* TODO: implementar menú hamburguesa con JS */
+        display: none;
     }
 
     .form-row {
